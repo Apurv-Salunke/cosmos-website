@@ -624,7 +624,7 @@ export default function Home() {
                     <MessageSquareText size={24} className="mr-3 mt-1 text-blue-400 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-100">WhatsApp-style Chat Interface</h4>
-                      <p className="text-neutral-400 body-sm">Familiar messaging interface that's easy to use with community-focused enhancements.</p>
+                      <p className="text-neutral-400 body-sm">Familiar messaging interface that&apos;s easy to use with community-focused enhancements.</p>
                     </div>
                   </li>
                   <li className="flex items-start">
@@ -847,7 +847,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="space-y-6 scroll-animation scroll-delay-2">
-                <h3 className="text-3xl font-bold text-gray-100">Your Community's Front Door</h3>
+                <h3 className="text-3xl font-bold text-gray-100">Your Community&apos;s Front Door</h3>
                 <p className="body-md text-neutral-300">The About tab provides essential information about the community, including resources, upcoming events, and important details for members.</p>
                 <ul className="space-y-4">
                   {/* Replace with actual icons when available */}
@@ -855,7 +855,7 @@ export default function Home() {
                     <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-100">Community Overview</h4>
-                      <p className="text-neutral-400 body-sm">A comprehensive view of the community's purpose, rules, and organization.</p>
+                      <p className="text-neutral-400 body-sm">A comprehensive view of the community&apos;s purpose, rules, and organization.</p>
                     </div>
                   </li>
                   <li className="flex items-start">
@@ -978,7 +978,7 @@ export default function Home() {
                     <div className="text-sm text-gray-400">@alex</div>
               </div>
             </div>
-                <p className="body-sm text-gray-300">I've never seen anything like this before. It's amazing. I love it.</p>
+                <p className="body-sm text-gray-300">I&apos;ve never seen anything like this before. It&apos;s amazing. I love it.</p>
           </div>
               
               <div className="flex-shrink-0 w-[280px] bg-gray-900 p-5 rounded-xl border border-gray-800 mx-3">
@@ -989,7 +989,7 @@ export default function Home() {
                     <div className="text-sm text-gray-400">@jack</div>
                   </div>
                 </div>
-                <p className="body-sm text-gray-300">I'm at a loss for words. This is amazing. I love it.</p>
+                <p className="body-sm text-gray-300">I&apos;m at a loss for words. This is amazing. I love it.</p>
                   </div>
               
               <div className="flex-shrink-0 w-[280px] bg-gray-900 p-5 rounded-xl border border-gray-800 mx-3">
@@ -1000,7 +1000,7 @@ export default function Home() {
                     <div className="text-sm text-gray-400">@jill</div>
                 </div>
                 </div>
-                <p className="body-sm text-gray-300">I don't know what to say. I'm speechless. This is amazing.</p>
+                <p className="body-sm text-gray-300">I don&apos;t know what to say. I&apos;m speechless. This is amazing.</p>
             </div>
               
               <div className="flex-shrink-0 w-[280px] bg-gray-900 p-5 rounded-xl border border-gray-800 mx-3">
@@ -1011,7 +1011,7 @@ export default function Home() {
                     <div className="text-sm text-gray-400">@james</div>
           </div>
               </div>
-                <p className="body-sm text-gray-300">I'm at a loss for words. This is amazing. I love it.</p>
+                <p className="body-sm text-gray-300">I&apos;m at a loss for words. This is amazing. I love it.</p>
                     </div>
               
               <div className="flex-shrink-0 w-[280px] bg-gray-900 p-5 rounded-xl border border-gray-800 mx-3">
@@ -1022,7 +1022,7 @@ export default function Home() {
                     <div className="text-sm text-gray-400">@jane</div>
                     </div>
                     </div>
-                <p className="body-sm text-gray-300">I'm at a loss for words. This is amazing. I love it.</p>
+                <p className="body-sm text-gray-300">I&apos;m at a loss for words. This is amazing. I love it.</p>
               </div>
             </Marquee>
             
@@ -1035,7 +1035,7 @@ export default function Home() {
                     <div className="text-sm text-gray-400">@ryan</div>
             </div>
           </div>
-                <p className="body-sm text-gray-300">Setting up my community was so easy. Can't believe it only took minutes.</p>
+                <p className="body-sm text-gray-300">Setting up my community was so easy. Can&apos;t believe it only took minutes.</p>
               </div>
               
               <div className="flex-shrink-0 w-[280px] bg-gray-900 p-5 rounded-xl border border-gray-800 mx-3">
@@ -1046,7 +1046,7 @@ export default function Home() {
                     <div className="text-sm text-gray-400">@maria</div>
             </div>
               </div>
-                <p className="body-sm text-gray-300">My students are loving the mobile experience. It's so easy to use.</p>
+                <p className="body-sm text-gray-300">My students are loving the mobile experience. It&apos;s so easy to use.</p>
                     </div>
               
               <div className="flex-shrink-0 w-[280px] bg-gray-900 p-5 rounded-xl border border-gray-800 mx-3">
@@ -1135,7 +1135,7 @@ export default function Home() {
           <div className="container mx-auto px-4 spacing-3">
             <GradientHeading as="h2" className="heading-md text-center">The Vision</GradientHeading>
             <p className="body-lg text-center text-container mx-auto">
-              Playto isn't just a course app. It's a new way to build movements. We're helping the next generation of creators launch micro-schools, learning clubs, skill guilds, and peer-powered academies—with zero technical friction and complete ownership.
+              Playto isn&apos;t just a course app. It&apos;s a new way to build movements. We&apos;re helping the next generation of creators launch micro-schools, learning clubs, skill guilds, and peer-powered academies—with zero technical friction and complete ownership.
             </p>
             <div className="flex justify-center">
               <ShimmerButton 
