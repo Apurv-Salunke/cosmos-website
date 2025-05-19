@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { Particles } from "@/components/magicui/particles";
+import { CursorWrapper } from "@/components/ui/cursor-wrapper";
 
 const playfair = Playfair_Display({ 
   subsets: ['latin'],
@@ -14,42 +16,30 @@ const inter = Inter({
   display: 'swap',
 })
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1
+};
+
 export const metadata: Metadata = {
-  title: "vibedev.ai",
-  description: "Experience the new way of coding with vibedev.ai. Transform your development workflow and vibe with your code like never before.",
+  title: "Playto - Community Apps, Courses & Memberships",
+  description: "Playto is an all-in-one mobile-first platform that combines community apps, course platforms, and monetization tools for creators and educators.",
   icons: {
     icon: [
       {
-        url: "/images/idevibelogo.png",
-        type: "image/png",
-        sizes: "32x32"
-      },
-      {
-        url: "/images/idevibelogo.png",
-        type: "image/png",
-        sizes: "16x16"
+        url: "/favicon.ico",
+        type: "image/x-icon",
       }
     ],
     apple: [
       {
-        url: "/images/idevibelogo.png",
-        type: "image/png",
+        url: "/favicon.ico",
+        type: "image/x-icon",
         sizes: "180x180"
       }
-    ],
-    shortcut: [{ url: "/images/idevibelogo.png" }],
-    other: [
-      {
-        rel: "icon",
-        url: "/images/idevibelogo.png",
-      },
-    ],
+    ]
   },
-  manifest: "/manifest.json",
-  viewport: {
-    width: 'device-width',
-    initialScale: 1
-  }
+  manifest: "/manifest.json"
 };
 
 export default function RootLayout({
@@ -60,12 +50,23 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/idevibelogo.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/idevibelogo.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/idevibelogo.png" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${inter.className} bg-black bg-dotted-grid`}>{children}</body>
+      <body className={`${inter.className} bg-black bg-dotted-grid relative overflow-x-hidden`}>
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <Particles
+            className="h-full w-full"
+            quantity={200}
+            ease={20}
+            color="#ffffff"
+            size={1.2}
+            refresh={true}
+            staticity={30}
+          />
+        </div>
+        {children}
+        <CursorWrapper />
+      </body>
     </html>
   );
 }
