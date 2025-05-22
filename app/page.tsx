@@ -31,17 +31,12 @@ import VisionSection from "@/components/landing/VisionSection";
 import FAQSection from "@/components/landing/FAQSection";
 import JoinWaitlistSection from "@/components/landing/JoinWaitlistSection";
 import Footer from "@/components/landing/Footer";
+import { audienceProfiles, neonColorPairs } from "@/lib/constants";
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 })
-
-const neonColorPairs = [
-  { firstColor: "#3b82f6", secondColor: "#8b5cf6" }, // Blue to Purple
-  { firstColor: "#8b5cf6", secondColor: "#ec4899" }, // Purple to Pink
-  { firstColor: "#ec4899", secondColor: "#3b82f6" }, // Pink to Blue
-];
 
 export default function Home() {
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
@@ -52,34 +47,6 @@ export default function Home() {
   const toggleAccordion = (index: number) => {
     setActiveAccordion(activeAccordion === index ? null : index);
   };
-
-  const audienceProfiles = [
-    {
-      id: 1,
-      name: "Creators & Influencers",
-      image: "/images/app-creator.png",
-    },
-    {
-      id: 2,
-      name: "Educators & Tutors",
-      image: "/images/app-educator.png",
-    },
-    {
-      id: 3,
-      name: "Coaches & Freelancers",
-      image: "/images/app-coach.png",
-    },
-    {
-      id: 4,
-      name: "Content Creators",
-      image: "/images/app-content.png",
-    },
-    {
-      id: 5,
-      name: "Passionate Hobbyists",
-      image: "/images/app-hobbyist.png",
-    },
-  ];
 
   // Add scroll animation on mount
   useEffect(() => {
