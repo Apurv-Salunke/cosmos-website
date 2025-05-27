@@ -6,7 +6,7 @@ import WhatIsPlaytoSection from "@/components/landing/WhatIsPlaytoSection";
 import WhoIsPlaytoForSection from "@/components/landing/WhoIsPlaytoForSection";
 import KeyFeaturesSection from "@/components/landing/KeyFeaturesSection";
 import HowItWorksSection from "@/components/landing/HowItWorksSection";
-// import SimpleInterfaceSection from "@/components/landing/SimpleInterfaceSection";
+import SimpleInterfaceSection from "@/components/landing/SimpleInterfaceSection";
 // import ComprehensiveLearningSection from "@/components/landing/ComprehensiveLearningSection";
 // import GamifiedEngagementSection from "@/components/landing/GamifiedEngagementSection";
 // import CommunityLandingSection from "@/components/landing/CommunityLandingSection";
@@ -29,7 +29,7 @@ const MemoizedWhatIsPlaytoSection = memo(WhatIsPlaytoSection);
 const MemoizedWhoIsPlaytoForSection = memo(WhoIsPlaytoForSection);
 const MemoizedKeyFeaturesSection = memo(KeyFeaturesSection);
 const MemoizedHowItWorksSection = memo(HowItWorksSection);
-// const MemoizedSimpleInterfaceSection = memo(SimpleInterfaceSection);
+const MemoizedSimpleInterfaceSection = memo(SimpleInterfaceSection);
 // const MemoizedComprehensiveLearningSection = memo(ComprehensiveLearningSection);
 // const MemoizedGamifiedEngagementSection = memo(GamifiedEngagementSection);
 // const MemoizedCommunityLandingSection = memo(CommunityLandingSection);
@@ -56,7 +56,7 @@ export default function Home() {
         {/* How It Works */}
         <MemoizedHowItWorksSection />
         {/* Simple, Beautiful Interface */}
-        {/* <MemoizedSimpleInterfaceSection /> */}
+        <MemoizedSimpleInterfaceSection />
         {/* Comprehensive Learning Experience */}
         {/* <MemoizedComprehensiveLearningSection /> */}
         {/* Gamified Engagement */}

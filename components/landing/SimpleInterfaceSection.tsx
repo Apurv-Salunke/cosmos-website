@@ -6,6 +6,29 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { useMemo } from "react";
 
+const interfaceFeatures = [
+  {
+    icon: <MessageSquareText size={24} className="mr-3 mt-1 text-blue-400 flex-shrink-0" />,
+    title: "WhatsApp-style Chat Interface",
+    description: "Familiar messaging interface that's easy to use with community-focused enhancements.",
+  },
+  {
+    icon: <PlaySquare size={24} className="mr-3 mt-1 text-green-400 flex-shrink-0" />,
+    title: "Tab-based Navigation",
+    description: "Simple bottom tabs for switching between chat, learning, leaderboard, and more.",
+  },
+  {
+    icon: <BarChart3 size={24} className="mr-3 mt-1 text-purple-400 flex-shrink-0" />,
+    title: "Topic Organization",
+    description: "Keep conversations organized with topics instead of confusing sub-groups.",
+  },
+  {
+    icon: <Megaphone size={24} className="mr-3 mt-1 text-amber-400 flex-shrink-0" />,
+    title: "Mobile-First Design",
+    description: "Built for mobile with a responsive design that works on any device.",
+  },
+];
+
 export default function SimpleInterfaceSection() {
   const neonColors = useMemo(() => ({ firstColor: "#3b82f6", secondColor: "#8b5cf6" }), []);
   return (
@@ -48,34 +71,15 @@ export default function SimpleInterfaceSection() {
             <h3 className="text-3xl font-bold text-gray-100">Intuitive Navigation</h3>
             <p className="body-md text-neutral-300">Navigate effortlessly between communities, courses, and features with a simple, WhatsApp-inspired interface.</p>
             <ul className="space-y-4">
-              <li className="flex items-start">
-                <MessageSquareText size={24} className="mr-3 mt-1 text-blue-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">WhatsApp-style Chat Interface</h4>
-                  <p className="text-neutral-400 body-sm">Familiar messaging interface that&apos;s easy to use with community-focused enhancements.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <PlaySquare size={24} className="mr-3 mt-1 text-green-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Tab-based Navigation</h4>
-                  <p className="text-neutral-400 body-sm">Simple bottom tabs for switching between chat, learning, leaderboard, and more.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <BarChart3 size={24} className="mr-3 mt-1 text-purple-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Topic Organization</h4>
-                  <p className="text-neutral-400 body-sm">Keep conversations organized with topics instead of confusing sub-groups.</p>
-                </div>
-              </li>
-               <li className="flex items-start">
-                <Megaphone size={24} className="mr-3 mt-1 text-amber-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Mobile-First Design</h4>
-                  <p className="text-neutral-400 body-sm">Built for mobile with a responsive design that works on any device.</p>
-                </div>
-              </li>
+              {interfaceFeatures.map((feature) => (
+                <li className="flex items-start" key={feature.title}>
+                  {feature.icon}
+                  <div>
+                    <h4 className="font-semibold text-gray-100">{feature.title}</h4>
+                    <p className="text-neutral-400 body-sm">{feature.description}</p>
+                  </div>
+                </li>
+              ))}
             </ul>
             <a href="#features" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group">
               See all interface features
