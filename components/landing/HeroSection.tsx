@@ -6,6 +6,7 @@ import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import Iphone15Pro from "@/components/magicui/iphone-15-pro";
 import { useRef, useMemo, useEffect, useState, memo } from "react";
+import HeroRipple from "./HeroRipple";
 
 const neonColorPairs = [
   { firstColor: "#3b82f6", secondColor: "#8b5cf6" },
@@ -72,13 +73,7 @@ export default function HeroSection() {
         className="absolute inset-0 flex items-center justify-center z-0"
         style={{ background: `radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, transparent 70%)` }}
       >
-        <Ripple 
-          mainCircleSize={600}
-          mainCircleOpacity={0.25}
-          numCircles={8}
-          className="absolute"
-          style={rippleStyle}
-        />
+        <HeroRipple />
       </div>
       <div className="hero-glow"></div>
       <div className="container mx-auto px-4 z-20 relative flex flex-col items-center">
