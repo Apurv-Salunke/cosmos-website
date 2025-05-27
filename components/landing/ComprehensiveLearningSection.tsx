@@ -6,6 +6,29 @@ import { CheckCircle2 } from "lucide-react";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { useMemo } from "react";
 
+const learningFeatures = [
+  {
+    icon: <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />,
+    title: "Structured Course Modules",
+    description: "Easily navigate through organized course content with clear progression paths.",
+  },
+  {
+    icon: <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />,
+    title: "Assignment Submissions",
+    description: "Complete and submit assignments directly within the app with deadline tracking.",
+  },
+  {
+    icon: <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />,
+    title: "Progress Tracking",
+    description: "Visualize your learning journey with intuitive progress indicators and completion status.",
+  },
+  {
+    icon: <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />,
+    title: "Course Discussions",
+    description: "Engage directly with instructors and peers through module-specific discussion threads.",
+  },
+];
+
 export default function ComprehensiveLearningSection() {
   const neonColors = useMemo(() => ({ firstColor: "#ec4899", secondColor: "#3b82f6" }), []);
   return (
@@ -48,34 +71,15 @@ export default function ComprehensiveLearningSection() {
             <h3 className="text-3xl font-bold text-gray-100">Interactive Learning Experience</h3>
             <p className="body-md text-neutral-300">Our learning tab provides a structured, engaging way to consume course content, track progress, and complete assignments.</p>
             <ul className="space-y-4">
-              <li className="flex items-start">
-                <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Structured Course Modules</h4>
-                  <p className="text-neutral-400 body-sm">Easily navigate through organized course content with clear progression paths.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Assignment Submissions</h4>
-                  <p className="text-neutral-400 body-sm">Complete and submit assignments directly within the app with deadline tracking.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Progress Tracking</h4>
-                  <p className="text-neutral-400 body-sm">Visualize your learning journey with intuitive progress indicators and completion status.</p>
-                </div>
-              </li>
-               <li className="flex items-start">
-                <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Course Discussions</h4>
-                  <p className="text-neutral-400 body-sm">Engage directly with instructors and peers through module-specific discussion threads.</p>
-                </div>
-              </li>
+              {learningFeatures.map((feature) => (
+                <li className="flex items-start" key={feature.title}>
+                  {feature.icon}
+                  <div>
+                    <h4 className="font-semibold text-gray-100">{feature.title}</h4>
+                    <p className="text-neutral-400 body-sm">{feature.description}</p>
+                  </div>
+                </li>
+              ))}
             </ul>
             <ShimmerButton className="mt-4 w-full md:w-auto" background="rgba(59, 130, 246, 0.5)">Join the Waitlist</ShimmerButton>
           </div>
