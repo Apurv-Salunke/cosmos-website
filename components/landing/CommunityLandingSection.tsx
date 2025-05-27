@@ -4,8 +4,10 @@ import Iphone15Pro from "@/components/magicui/iphone-15-pro";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { CheckCircle2 } from "lucide-react";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { useMemo } from "react";
 
 export default function CommunityLandingSection() {
+  const neonColors = useMemo(() => ({ firstColor: "#10b981", secondColor: "#f59e0b" }), []);
   return (
     <section className="py-20 bg-gray-950 text-white overflow-hidden">
       <div className="container mx-auto px-4 spacing-3">
@@ -18,7 +20,7 @@ export default function CommunityLandingSection() {
             <div className="relative w-auto inline-block">
               <NeonGradientCard
                 className="absolute inset-0 rounded-[54px] z-0 scale-75 transform-gpu bg-transparent"
-                neonColors={{firstColor: "#10b981", secondColor: "#f59e0b"}}
+                neonColors={neonColors}
                 borderRadius={41}
                 borderSize={1.5}
               >
