@@ -3,7 +3,7 @@
 import { Inter } from 'next/font/google';
 import HeroSection from "@/components/landing/HeroSection";
 import WhatIsPlaytoSection from "@/components/landing/WhatIsPlaytoSection";
-// import WhoIsPlaytoForSection from "@/components/landing/WhoIsPlaytoForSection";
+import WhoIsPlaytoForSection from "@/components/landing/WhoIsPlaytoForSection";
 // import KeyFeaturesSection from "@/components/landing/KeyFeaturesSection";
 // import HowItWorksSection from "@/components/landing/HowItWorksSection";
 // import SimpleInterfaceSection from "@/components/landing/SimpleInterfaceSection";
@@ -17,7 +17,7 @@ import WhatIsPlaytoSection from "@/components/landing/WhatIsPlaytoSection";
 // import FAQSection from "@/components/landing/FAQSection";
 // import JoinWaitlistSection from "@/components/landing/JoinWaitlistSection";
 // import Footer from "@/components/landing/Footer";
-// import { audienceProfiles } from "@/lib/constants";
+import { audienceProfiles } from "@/lib/constants";
 import React, { memo } from 'react';
 
 const inter = Inter({
@@ -26,7 +26,7 @@ const inter = Inter({
 })
 
 const MemoizedWhatIsPlaytoSection = memo(WhatIsPlaytoSection);
-// const MemoizedWhoIsPlaytoForSection = memo(WhoIsPlaytoForSection);
+const MemoizedWhoIsPlaytoForSection = memo(WhoIsPlaytoForSection);
 // const MemoizedKeyFeaturesSection = memo(KeyFeaturesSection);
 // const MemoizedHowItWorksSection = memo(HowItWorksSection);
 // const MemoizedSimpleInterfaceSection = memo(SimpleInterfaceSection);
@@ -50,7 +50,7 @@ export default function Home() {
         {/* What is Playto */}
         <MemoizedWhatIsPlaytoSection />
         {/* Who is Playto for */}
-        {/* <MemoizedWhoIsPlaytoForSection audienceProfiles={audienceProfiles} /> */}
+        <MemoizedWhoIsPlaytoForSection audienceProfiles={audienceProfiles} />
         {/* Key Features */}
         {/* <MemoizedKeyFeaturesSection /> */}
         {/* How It Works */}
