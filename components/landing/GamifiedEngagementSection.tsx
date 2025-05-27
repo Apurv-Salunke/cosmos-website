@@ -6,6 +6,29 @@ import { CheckCircle2 } from "lucide-react";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { useMemo } from "react";
 
+const gamifiedFeatures = [
+  {
+    icon: <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />,
+    title: "Point-Based Ranking",
+    description: "Earn points for active participation, completing courses, and contributing to discussions.",
+  },
+  {
+    icon: <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />,
+    title: "Achievement Badges",
+    description: "Collect badges for reaching specific milestones and completing special challenges.",
+  },
+  {
+    icon: <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />,
+    title: "Progress Tracking",
+    description: "See your improvement over time with detailed analytics on your community participation.",
+  },
+  {
+    icon: <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />,
+    title: "Community Recognition",
+    description: "Get recognized for your contributions with special status indicators and roles.",
+  },
+];
+
 export default function GamifiedEngagementSection() {
   const neonColors = useMemo(() => ({ firstColor: "#3b82f6", secondColor: "#10b981" }), []);
   return (
@@ -20,34 +43,15 @@ export default function GamifiedEngagementSection() {
             <h3 className="text-3xl font-bold text-gray-100">Boost Engagement with Gamification</h3>
             <p className="body-md text-neutral-300">Our leaderboard system makes learning and community participation more engaging by adding friendly competition and achievement tracking.</p>
             <ul className="space-y-4">
-              <li className="flex items-start">
-                <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Point-Based Ranking</h4>
-                  <p className="text-neutral-400 body-sm">Earn points for active participation, completing courses, and contributing to discussions.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Achievement Badges</h4>
-                  <p className="text-neutral-400 body-sm">Collect badges for reaching specific milestones and completing special challenges.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Progress Tracking</h4>
-                  <p className="text-neutral-400 body-sm">See your improvement over time with detailed analytics on your community participation.</p>
-                </div>
-              </li>
-               <li className="flex items-start">
-                <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Community Recognition</h4>
-                  <p className="text-neutral-400 body-sm">Get recognized for your contributions with special status indicators and roles.</p>
-                </div>
-              </li>
+              {gamifiedFeatures.map((feature) => (
+                <li className="flex items-start" key={feature.title}>
+                  {feature.icon}
+                  <div>
+                    <h4 className="font-semibold text-gray-100">{feature.title}</h4>
+                    <p className="text-neutral-400 body-sm">{feature.description}</p>
+                  </div>
+                </li>
+              ))}
             </ul>
             <ShimmerButton className="mt-4 w-full md:w-auto" background="rgba(59, 130, 246, 0.5)">Join the Waitlist</ShimmerButton>
           </div>

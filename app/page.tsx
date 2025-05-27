@@ -19,6 +19,7 @@ import ComprehensiveLearningSection from "@/components/landing/ComprehensiveLear
 // import Footer from "@/components/landing/Footer";
 import { audienceProfiles } from "@/lib/constants";
 import React, { memo } from 'react';
+import GamifiedEngagementSection from '@/components/landing/GamifiedEngagementSection';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -31,7 +32,7 @@ const MemoizedKeyFeaturesSection = memo(KeyFeaturesSection);
 const MemoizedHowItWorksSection = memo(HowItWorksSection);
 const MemoizedSimpleInterfaceSection = memo(SimpleInterfaceSection);
 const MemoizedComprehensiveLearningSection = memo(ComprehensiveLearningSection);
-// const MemoizedGamifiedEngagementSection = memo(GamifiedEngagementSection);
+const MemoizedGamifiedEngagementSection = memo(GamifiedEngagementSection);
 // const MemoizedCommunityLandingSection = memo(CommunityLandingSection);
 // const MemoizedMarketingToolsSection = memo(MarketingToolsSection);
 // const MemoizedTestimonialsSection = memo(TestimonialsSection);
@@ -60,7 +61,7 @@ export default function Home() {
         {/* Comprehensive Learning Experience */}
         <MemoizedComprehensiveLearningSection />
         {/* Gamified Engagement */}
-        {/* <MemoizedGamifiedEngagementSection /> */}
+        <MemoizedGamifiedEngagementSection />
         {/* Community Landing Page */}
         {/* <MemoizedCommunityLandingSection /> */}
         {/* Powerful Marketing Tools */}
