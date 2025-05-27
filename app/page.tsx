@@ -2,7 +2,7 @@
 
 import { Inter } from 'next/font/google';
 import HeroSection from "@/components/landing/HeroSection";
-// import WhatIsPlaytoSection from "@/components/landing/WhatIsPlaytoSection";
+import WhatIsPlaytoSection from "@/components/landing/WhatIsPlaytoSection";
 // import WhoIsPlaytoForSection from "@/components/landing/WhoIsPlaytoForSection";
 // import KeyFeaturesSection from "@/components/landing/KeyFeaturesSection";
 // import HowItWorksSection from "@/components/landing/HowItWorksSection";
@@ -25,7 +25,7 @@ const inter = Inter({
   display: 'swap',
 })
 
-// const MemoizedWhatIsPlaytoSection = memo(WhatIsPlaytoSection);
+const MemoizedWhatIsPlaytoSection = memo(WhatIsPlaytoSection);
 // const MemoizedWhoIsPlaytoForSection = memo(WhoIsPlaytoForSection);
 // const MemoizedKeyFeaturesSection = memo(KeyFeaturesSection);
 // const MemoizedHowItWorksSection = memo(HowItWorksSection);
@@ -48,7 +48,7 @@ export default function Home() {
         {/* Hero Section */}
         <HeroSection />
         {/* What is Playto */}
-        {/* <MemoizedWhatIsPlaytoSection /> */}
+        <MemoizedWhatIsPlaytoSection />
         {/* Who is Playto for */}
         {/* <MemoizedWhoIsPlaytoForSection audienceProfiles={audienceProfiles} /> */}
         {/* Key Features */}

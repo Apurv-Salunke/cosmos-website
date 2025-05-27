@@ -2,6 +2,49 @@ import GradientHeading from "@/components/ui/GradientHeading";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { MessageSquareText, PlaySquare, BarChart3, Megaphone, Star, CheckCircle2 } from "lucide-react";
 
+const playtoFeatures = [
+  {
+    icon: <MessageSquareText size={32} className="text-blue-400 icon-pulse-glow" />,
+    title: "Community Chat",
+    description: "Organized, WhatsApp-style chat with threads & topics.",
+    features: ["Threaded replies", "Topic organization", "Voice channel"],
+    delay: 1,
+    colSpan: "lg:col-span-2",
+  },
+  {
+    icon: <PlaySquare size={32} className="text-green-400 icon-pulse-glow" />,
+    title: "Course Delivery",
+    description: "Structured course management & content delivery.",
+    features: ["Organized lessons", "Assignment submission", "Progress tracking"],
+    delay: 2,
+    colSpan: "lg:col-span-2",
+  },
+  {
+    icon: <BarChart3 size={32} className="text-purple-400 icon-pulse-glow" />,
+    title: "Gamified Engagement",
+    description: "Boost participation with fun gamification elements.",
+    features: ["Member rankings", "Achievement badges", "Activity metrics"],
+    delay: 3,
+    colSpan: "lg:col-span-2",
+  },
+  {
+    icon: <Megaphone size={32} className="text-amber-400 icon-pulse-glow" />,
+    title: "Creator Marketing",
+    description: "Tools to grow communities, courses & memberships easily.",
+    features: ["Email Marketing", "WhatsApp Marketing", "Landing Page Builder"],
+    delay: 4,
+    colSpan: "lg:col-span-2 lg:col-start-2",
+  },
+  {
+    icon: <Star size={32} className="text-yellow-400 icon-pulse-glow" />,
+    title: "Exclusive Memberships",
+    description: "Exclusive spaces for supporters with premium content.",
+    features: ["Host Exclusive Content", "Unlimited File Sharing", "Organize Member Events"],
+    delay: 5,
+    colSpan: "lg:col-span-2",
+  }
+];
+
 export default function WhatIsPlaytoSection() {
   return (
     <section className="relative py-20 bg-black text-white overflow-hidden">
@@ -11,48 +54,7 @@ export default function WhatIsPlaytoSection() {
           A mobile-first platform to launch communities, courses & memberships fast, generate revenue, and connect deeply with your audience.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-8 max-w-6xl mx-auto">
-          {[
-            {
-              icon: <MessageSquareText size={32} className="text-blue-400 icon-pulse-glow" />,
-              title: "Community Chat",
-              description: "Organized, WhatsApp-style chat with threads & topics.",
-              features: ["Threaded replies", "Topic organization", "Voice channel"],
-              delay: 1,
-              colSpan: "lg:col-span-2",
-            },
-            {
-              icon: <PlaySquare size={32} className="text-green-400 icon-pulse-glow" />,
-              title: "Course Delivery",
-              description: "Structured course management & content delivery.",
-              features: ["Organized lessons", "Assignment submission", "Progress tracking"],
-              delay: 2,
-              colSpan: "lg:col-span-2",
-            },
-            {
-              icon: <BarChart3 size={32} className="text-purple-400 icon-pulse-glow" />,
-              title: "Gamified Engagement",
-              description: "Boost participation with fun gamification elements.",
-              features: ["Member rankings", "Achievement badges", "Activity metrics"],
-              delay: 3,
-              colSpan: "lg:col-span-2",
-            },
-            {
-              icon: <Megaphone size={32} className="text-amber-400 icon-pulse-glow" />,
-              title: "Creator Marketing",
-              description: "Tools to grow communities, courses & memberships easily.",
-              features: ["Email Marketing", "WhatsApp Marketing", "Landing Page Builder"],
-              delay: 4,
-              colSpan: "lg:col-span-2 lg:col-start-2", // Start at 2nd column for centering
-            },
-            {
-              icon: <Star size={32} className="text-yellow-400 icon-pulse-glow" />,
-              title: "Exclusive Memberships",
-              description: "Exclusive spaces for supporters with premium content.",
-              features: ["Host Exclusive Content", "Unlimited File Sharing", "Organize Member Events"],
-              delay: 5,
-              colSpan: "lg:col-span-2",
-            }
-          ].map((item, index) => (
+          {playtoFeatures.map((item, index) => (
             <div 
               key={index} 
               className={`relative group bg-gradient-to-br from-blue-600/20 via-purple-600/10 to-black/20 backdrop-blur-md p-8 rounded-xl border border-gray-700/40 scroll-animation scroll-delay-${item.delay} flex flex-col aspect-square box-pulse-glow overflow-hidden ${item.colSpan}`}>
