@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 import HeroSection from "@/components/landing/HeroSection";
 import WhatIsPlaytoSection from "@/components/landing/WhatIsPlaytoSection";
 import WhoIsPlaytoForSection from "@/components/landing/WhoIsPlaytoForSection";
-// import KeyFeaturesSection from "@/components/landing/KeyFeaturesSection";
+import KeyFeaturesSection from "@/components/landing/KeyFeaturesSection";
 // import HowItWorksSection from "@/components/landing/HowItWorksSection";
 // import SimpleInterfaceSection from "@/components/landing/SimpleInterfaceSection";
 // import ComprehensiveLearningSection from "@/components/landing/ComprehensiveLearningSection";
@@ -27,7 +27,7 @@ const inter = Inter({
 
 const MemoizedWhatIsPlaytoSection = memo(WhatIsPlaytoSection);
 const MemoizedWhoIsPlaytoForSection = memo(WhoIsPlaytoForSection);
-// const MemoizedKeyFeaturesSection = memo(KeyFeaturesSection);
+const MemoizedKeyFeaturesSection = memo(KeyFeaturesSection);
 // const MemoizedHowItWorksSection = memo(HowItWorksSection);
 // const MemoizedSimpleInterfaceSection = memo(SimpleInterfaceSection);
 // const MemoizedComprehensiveLearningSection = memo(ComprehensiveLearningSection);
@@ -52,7 +52,7 @@ export default function Home() {
         {/* Who is Playto for */}
         <MemoizedWhoIsPlaytoForSection audienceProfiles={audienceProfiles} />
         {/* Key Features */}
-        {/* <MemoizedKeyFeaturesSection /> */}
+        <MemoizedKeyFeaturesSection />
         {/* How It Works */}
         {/* <MemoizedHowItWorksSection /> */}
         {/* Simple, Beautiful Interface */}
