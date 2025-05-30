@@ -1,4 +1,5 @@
 import { SVGProps } from "react";
+import Image from "next/image";
 
 export interface Iphone15ProProps extends SVGProps<SVGSVGElement> {
   width?: number;
@@ -73,11 +74,13 @@ export default function Iphone15Pro({
       {src && (
         <foreignObject x="21.25" y="19.25" width="389.5" height="843.5" clipPath="url(#roundedCorners)">
           <div className="w-full h-full">
-            <img
+            <Image
               src={src}
               alt="Phone screen content"
               className="size-full object-cover rounded-[55.75px]"
               loading="lazy"
+              fill
+              style={{ objectFit: "cover", borderRadius: "55.75px" }}
             />
           </div>
         </foreignObject>

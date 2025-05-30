@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { motion, MotionStyle, Transition } from "motion/react";
+import { memo, useMemo } from "react";
 
 interface BorderBeamProps {
   /**
@@ -46,7 +47,7 @@ interface BorderBeamProps {
   initialOffset?: number;
 }
 
-export const BorderBeam = ({
+export const BorderBeam = memo(({
   className,
   size = 50,
   delay = 0,
@@ -58,6 +59,32 @@ export const BorderBeam = ({
   reverse = false,
   initialOffset = 0,
 }: BorderBeamProps) => {
+  const memoizedStyle = useMemo(() => ({
+    width: size,
+    offsetPath: `rect(0 auto auto 0 round ${size}px)`,
+    "--color-from": colorFrom,
+    "--color-to": colorTo,
+    ...style,
+  }) as MotionStyle, [size, colorFrom, colorTo, style]);
+
+  const initial = useMemo(() => ({
+    offsetDistance: `${initialOffset}%`,
+  }), [initialOffset]);
+
+  const animate = useMemo(() => ({
+    offsetDistance: reverse
+      ? [`${100 - initialOffset}%`, `${-initialOffset}%`]
+      : [`${initialOffset}%`, `${100 + initialOffset}%`],
+  }), [reverse, initialOffset]);
+
+  const transitionProps = useMemo(() => ({
+    repeat: Infinity,
+    ease: "linear" as const,
+    duration,
+    delay: -delay,
+    ...transition,
+  }), [duration, delay, transition]);
+
   return (
     <div className="pointer-events-none absolute inset-0 rounded-[inherit] border border-transparent [mask-clip:padding-box,border-box] [mask-composite:intersect] [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)]">
       <motion.div
@@ -66,29 +93,13 @@ export const BorderBeam = ({
           "bg-gradient-to-l from-[var(--color-from)] via-[var(--color-to)] to-transparent",
           className,
         )}
-        style={
-          {
-            width: size,
-            offsetPath: `rect(0 auto auto 0 round ${size}px)`,
-            "--color-from": colorFrom,
-            "--color-to": colorTo,
-            ...style,
-          } as MotionStyle
-        }
-        initial={{ offsetDistance: `${initialOffset}%` }}
-        animate={{
-          offsetDistance: reverse
-            ? [`${100 - initialOffset}%`, `${-initialOffset}%`]
-            : [`${initialOffset}%`, `${100 + initialOffset}%`],
-        }}
-        transition={{
-          repeat: Infinity,
-          ease: "linear",
-          duration,
-          delay: -delay,
-          ...transition,
-        }}
+        style={memoizedStyle}
+        initial={initial}
+        animate={animate}
+        transition={transitionProps}
       />
     </div>
   );
-};
+});
+
+BorderBeam.displayName = "BorderBeam";
