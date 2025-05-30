@@ -7,21 +7,22 @@ import Footer from "@/components/landing/Footer";
 import { audienceProfiles } from "@/lib/constants";
 import React, { memo } from 'react';
 import LoadOnScroll from '@/components/LoadOnScroll';
+import Spinner from '@/components/Spinner';
 
-const WhatIsPlaytoSection = dynamic(() => import('@/components/landing/WhatIsPlaytoSection'), { loading: () => <div style={{minHeight: 200}}>Loading...</div> });
-const WhoIsPlaytoForSection = dynamic(() => import('@/components/landing/WhoIsPlaytoForSection'), { loading: () => <div style={{minHeight: 200}}>Loading...</div> });
-const KeyFeaturesSection = dynamic(() => import('@/components/landing/KeyFeaturesSection'), { loading: () => <div style={{minHeight: 200}}>Loading...</div> });
-const HowItWorksSection = dynamic(() => import('@/components/landing/HowItWorksSection'), { loading: () => <div style={{minHeight: 200}}>Loading...</div> });
-const SimpleInterfaceSection = dynamic(() => import('@/components/landing/SimpleInterfaceSection'), { loading: () => <div style={{minHeight: 200}}>Loading...</div> });
-const ComprehensiveLearningSection = dynamic(() => import('@/components/landing/ComprehensiveLearningSection'), { loading: () => <div style={{minHeight: 200}}>Loading...</div> });
-const GamifiedEngagementSection = dynamic(() => import('@/components/landing/GamifiedEngagementSection'), { loading: () => <div style={{minHeight: 200}}>Loading...</div> });
-const CommunityLandingSection = dynamic(() => import('@/components/landing/CommunityLandingSection'), { loading: () => <div style={{minHeight: 200}}>Loading...</div> });
-const MarketingToolsSection = dynamic(() => import('@/components/landing/MarketingToolsSection'), { loading: () => <div style={{minHeight: 200}}>Loading...</div> });
-const TestimonialsSection = dynamic(() => import('@/components/landing/TestimonialsSection'), { loading: () => <div style={{minHeight: 200}}>Loading...</div> });
-const HowPlaytoIsDifferentSection = dynamic(() => import('@/components/landing/HowPlaytoIsDifferentSection'), { loading: () => <div style={{minHeight: 200}}>Loading...</div> });
-const VisionSection = dynamic(() => import('@/components/landing/VisionSection'), { loading: () => <div style={{minHeight: 200}}>Loading...</div> });
-const FAQSection = dynamic(() => import('@/components/landing/FAQSection'), { loading: () => <div style={{minHeight: 200}}>Loading...</div> });
-const JoinWaitlistSection = dynamic(() => import('@/components/landing/JoinWaitlistSection'), { loading: () => <div style={{minHeight: 200}}>Loading...</div> });
+const WhatIsPlaytoSection = dynamic(() => import('@/components/landing/WhatIsPlaytoSection'), { loading: () => <Spinner /> });
+const WhoIsPlaytoForSection = dynamic(() => import('@/components/landing/WhoIsPlaytoForSection'), { loading: () => <Spinner /> });
+const KeyFeaturesSection = dynamic(() => import('@/components/landing/KeyFeaturesSection'), { loading: () => <Spinner /> });
+const HowItWorksSection = dynamic(() => import('@/components/landing/HowItWorksSection'), { loading: () => <Spinner /> });
+const SimpleInterfaceSection = dynamic(() => import('@/components/landing/SimpleInterfaceSection'), { loading: () => <Spinner /> });
+const ComprehensiveLearningSection = dynamic(() => import('@/components/landing/ComprehensiveLearningSection'), { loading: () => <Spinner /> });
+const GamifiedEngagementSection = dynamic(() => import('@/components/landing/GamifiedEngagementSection'), { loading: () => <Spinner /> });
+const CommunityLandingSection = dynamic(() => import('@/components/landing/CommunityLandingSection'), { loading: () => <Spinner /> });
+const MarketingToolsSection = dynamic(() => import('@/components/landing/MarketingToolsSection'), { loading: () => <Spinner /> });
+const TestimonialsSection = dynamic(() => import('@/components/landing/TestimonialsSection'), { loading: () => <Spinner /> });
+const HowPlaytoIsDifferentSection = dynamic(() => import('@/components/landing/HowPlaytoIsDifferentSection'), { loading: () => <Spinner /> });
+const VisionSection = dynamic(() => import('@/components/landing/VisionSection'), { loading: () => <Spinner /> });
+const FAQSection = dynamic(() => import('@/components/landing/FAQSection'), { loading: () => <Spinner /> });
+const JoinWaitlistSection = dynamic(() => import('@/components/landing/JoinWaitlistSection'), { loading: () => <Spinner /> });
 
 const inter = Inter({
   subsets: ['latin'],
