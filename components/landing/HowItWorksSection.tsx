@@ -34,7 +34,7 @@ export default function HowItWorksSection() {
               className="relative group bg-gradient-to-br from-blue-600/20 via-purple-600/10 to-black/20 backdrop-blur-md p-6 rounded-xl border border-gray-700/40 scroll-animation flex items-start space-x-4 box-pulse-glow overflow-hidden"
               style={item.style}
             >
-              <BorderBeam size={100} duration={6} delay={index * 0.2} colorFrom="#60a5fa" colorTo="#c084fc" />
+              {/* <BorderBeam size={100} duration={6} delay={index * 0.2} colorFrom="#60a5fa" colorTo="#c084fc" /> */}
               <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-blue-600/50 text-blue-200 font-bold text-lg border border-blue-500/70 shadow-md">
                 {item.step}
               </div>

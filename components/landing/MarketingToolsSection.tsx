@@ -39,14 +39,14 @@ export default function MarketingToolsSection() {
                   height={610} 
                   className="iphone-frame" 
                 />
-                <BorderBeam 
+                {/* <BorderBeam 
                   size={200} 
                   duration={10} 
                   delay={1} 
                   colorFrom="#f59e0b" 
                   colorTo="#ef4444" 
                   className="z-0" 
-                />
+                /> */}
               </div>
             </div>
           </div>

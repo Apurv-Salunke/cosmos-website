@@ -72,14 +72,14 @@ export default function GamifiedEngagementSection() {
                   height={610} 
                   className="iphone-frame" 
                 />
-                <BorderBeam 
+                {/* <BorderBeam 
                   size={200} 
                   duration={10} 
                   delay={0.6} 
                   colorFrom="#3b82f6" 
                   colorTo="#10b981" 
                   className="z-0" 
-                />
+                /> */}
               </div>
             </div>
           </div>

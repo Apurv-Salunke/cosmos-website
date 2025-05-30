@@ -5,6 +5,38 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 import { CheckCircle2 } from "lucide-react";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { useMemo } from "react";
+import React from "react";
+
+const communityFeatures = [
+  {
+    title: "Community Overview",
+    description: "A comprehensive view of the community's purpose, rules, and organization.",
+  },
+  {
+    title: "Event Calendar",
+    description: "Stay informed about upcoming voice chats, sessions, and community events.",
+  },
+  {
+    title: "Resource Library",
+    description: "Access important documents, guidelines, and shared resources.",
+  },
+  {
+    title: "Admin Information",
+    description: "Get to know your community leaders and how to contact them if needed.",
+  },
+];
+
+const FeatureItem = React.memo(function FeatureItem({ title, description }: { title: string; description: string }) {
+  return (
+    <li className="flex items-start">
+      <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />
+      <div>
+        <h4 className="font-semibold text-gray-100">{title}</h4>
+        <p className="text-neutral-400 body-sm">{description}</p>
+      </div>
+    </li>
+  );
+});
 
 export default function CommunityLandingSection() {
   const neonColors = useMemo(() => ({ firstColor: "#10b981", secondColor: "#f59e0b" }), []);
@@ -33,14 +65,14 @@ export default function CommunityLandingSection() {
                   height={610} 
                   className="iphone-frame" 
                 />
-                <BorderBeam 
+                {/* <BorderBeam 
                   size={200} 
                   duration={10} 
                   delay={0.8} 
                   colorFrom="#10b981" 
                   colorTo="#f59e0b" 
                   className="z-0" 
-                />
+                /> */}
               </div>
             </div>
           </div>
@@ -48,34 +80,9 @@ export default function CommunityLandingSection() {
             <h3 className="text-3xl font-bold text-gray-100">Your Community&apos;s Front Door</h3>
             <p className="body-md text-neutral-300">The About tab provides essential information about the community, including resources, upcoming events, and important details for members.</p>
             <ul className="space-y-4">
-              <li className="flex items-start">
-                <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Community Overview</h4>
-                  <p className="text-neutral-400 body-sm">A comprehensive view of the community&apos;s purpose, rules, and organization.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Event Calendar</h4>
-                  <p className="text-neutral-400 body-sm">Stay informed about upcoming voice chats, sessions, and community events.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Resource Library</h4>
-                  <p className="text-neutral-400 body-sm">Access important documents, guidelines, and shared resources.</p>
-                </div>
-              </li>
-               <li className="flex items-start">
-                <CheckCircle2 size={24} className="mr-3 mt-1 text-sky-400 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-gray-100">Admin Information</h4>
-                  <p className="text-neutral-400 body-sm">Get to know your community leaders and how to contact them if needed.</p>
-                </div>
-              </li>
+              {communityFeatures.map((feature) => (
+                <FeatureItem key={feature.title} title={feature.title} description={feature.description} />
+              ))}
             </ul>
             <ShimmerButton className="mt-4 w-full md:w-auto" background="rgba(59, 130, 246, 0.5)">Join the Waitlist</ShimmerButton>
           </div>

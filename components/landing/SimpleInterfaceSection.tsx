@@ -56,14 +56,14 @@ export default function SimpleInterfaceSection() {
                   height={610} 
                   className="iphone-frame" 
                 />
-                <BorderBeam 
+                {/* <BorderBeam 
                   size={200} 
                   duration={10} 
                   delay={0} 
                   colorFrom="#60a5fa" 
                   colorTo="#c084fc" 
                   className="z-0" 
-                />
+                /> */}
               </div>
             </div>
           </div>

@@ -11,15 +11,21 @@ import ComprehensiveLearningSection from "@/components/landing/ComprehensiveLear
 // import GamifiedEngagementSection from "@/components/landing/GamifiedEngagementSection";
 // import CommunityLandingSection from "@/components/landing/CommunityLandingSection";
 // import MarketingToolsSection from "@/components/landing/MarketingToolsSection";
-// import TestimonialsSection from "@/components/landing/TestimonialsSection";
+import TestimonialsSection from "@/components/landing/TestimonialsSection";
 // import HowPlaytoIsDifferentSection from "@/components/landing/HowPlaytoIsDifferentSection";
 // import VisionSection from "@/components/landing/VisionSection";
 // import FAQSection from "@/components/landing/FAQSection";
 // import JoinWaitlistSection from "@/components/landing/JoinWaitlistSection";
-// import Footer from "@/components/landing/Footer";
+import Footer from "@/components/landing/Footer";
 import { audienceProfiles } from "@/lib/constants";
 import React, { memo } from 'react';
 import GamifiedEngagementSection from '@/components/landing/GamifiedEngagementSection';
+import CommunityLandingSection from '@/components/landing/CommunityLandingSection';
+import MarketingToolsSection from '@/components/landing/MarketingToolsSection';
+import HowPlaytoIsDifferentSection from '@/components/landing/HowPlaytoIsDifferentSection';
+import VisionSection from '@/components/landing/VisionSection';
+import FAQSection from '@/components/landing/FAQSection';
+import JoinWaitlistSection from '@/components/landing/JoinWaitlistSection';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -33,14 +39,14 @@ const MemoizedHowItWorksSection = memo(HowItWorksSection);
 const MemoizedSimpleInterfaceSection = memo(SimpleInterfaceSection);
 const MemoizedComprehensiveLearningSection = memo(ComprehensiveLearningSection);
 const MemoizedGamifiedEngagementSection = memo(GamifiedEngagementSection);
-// const MemoizedCommunityLandingSection = memo(CommunityLandingSection);
-// const MemoizedMarketingToolsSection = memo(MarketingToolsSection);
-// const MemoizedTestimonialsSection = memo(TestimonialsSection);
-// const MemoizedHowPlaytoIsDifferentSection = memo(HowPlaytoIsDifferentSection);
-// const MemoizedVisionSection = memo(VisionSection);
-// // const MemoizedFAQSection = memo(FAQSection);
-// const MemoizedJoinWaitlistSection = memo(JoinWaitlistSection);
-// const MemoizedFooter = memo(Footer);
+const MemoizedCommunityLandingSection = memo(CommunityLandingSection);
+const MemoizedMarketingToolsSection = memo(MarketingToolsSection);
+const MemoizedTestimonialsSection = memo(TestimonialsSection);
+const MemoizedHowPlaytoIsDifferentSection = memo(HowPlaytoIsDifferentSection);
+const MemoizedVisionSection = memo(VisionSection);
+const MemoizedFAQSection = memo(FAQSection);
+const MemoizedJoinWaitlistSection = memo(JoinWaitlistSection);
+const MemoizedFooter = memo(Footer);
 
 export default function Home() {
   return (
@@ -63,23 +69,23 @@ export default function Home() {
         {/* Gamified Engagement */}
         <MemoizedGamifiedEngagementSection />
         {/* Community Landing Page */}
-        {/* <MemoizedCommunityLandingSection /> */}
+        <MemoizedCommunityLandingSection />
         {/* Powerful Marketing Tools */}
-        {/* <MemoizedMarketingToolsSection /> */}
+        <MemoizedMarketingToolsSection />
         {/* Testimonials */}
-        {/* <MemoizedTestimonialsSection /> */}
+        <MemoizedTestimonialsSection />
         {/* How Playto is Different */}
-        {/* <MemoizedHowPlaytoIsDifferentSection /> */}
+        <MemoizedHowPlaytoIsDifferentSection />
         {/* The Vision */}
-        {/* <MemoizedVisionSection /> */}
+        <MemoizedVisionSection />
         {/* FAQ Section */}
-        {/* <MemoizedFAQSection /> */}
+        <MemoizedFAQSection />
         {/* Join Waitlist */}
-        {/* <MemoizedJoinWaitlistSection /> */}
+        <MemoizedJoinWaitlistSection />
       </main>
 
       {/* Footer */}
-      {/* <MemoizedFooter /> */}
+      <MemoizedFooter />
     </div>
   )
 }

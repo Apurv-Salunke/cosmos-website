@@ -56,14 +56,14 @@ export default function ComprehensiveLearningSection() {
                   height={610} 
                   className="iphone-frame" 
                 />
-                <BorderBeam 
+                {/* <BorderBeam 
                   size={200} 
                   duration={10} 
                   delay={0.4} 
                   colorFrom="#ec4899" 
                   colorTo="#3b82f6" 
                   className="z-0" 
-                />
+                /> */}
               </div>
             </div>
           </div>
