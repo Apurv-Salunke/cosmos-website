@@ -58,7 +58,7 @@ export default function WhatIsPlaytoSection() {
             <div 
               key={index} 
               className={`relative group bg-gradient-to-br from-blue-600/20 via-purple-600/10 to-black/20 backdrop-blur-md p-8 rounded-xl border border-gray-700/40 scroll-animation scroll-delay-${item.delay} flex flex-col aspect-square box-pulse-glow overflow-hidden ${item.colSpan}`}>
-              <BorderBeam size={150} duration={8} delay={0} colorFrom="#60a5fa" colorTo="#c084fc" />
+              {/* <BorderBeam size={150} duration={8} delay={0} colorFrom="#60a5fa" colorTo="#c084fc" /> */}
               <div className="relative z-10 flex flex-col h-full">
                 <div>
                   <div className="mb-4 flex items-center justify-center w-16 h-16 rounded-full bg-white/5 border border-gray-700/50 shadow-inner">

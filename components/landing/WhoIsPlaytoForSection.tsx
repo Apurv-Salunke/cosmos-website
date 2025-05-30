@@ -23,13 +23,13 @@ const AudienceCard = React.memo(function AudienceCard({ profile }: { profile: Au
             className="iphone-frame transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/20" 
             src="/images/program.png"
           />
-          <BorderBeam 
+          {/* <BorderBeam 
             size={60}
             colorFrom="#60a5fa"
             colorTo="#c084fc"
             duration={8}
             delay={profile.id * 0.5}
-          />
+          /> */}
         </div>
       </div>
       <h3 className="body-md font-medium group-hover:text-blue-400 transition-colors duration-300">{profile.name}</h3>
