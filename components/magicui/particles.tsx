@@ -123,8 +123,9 @@ export const Particles: React.FC<ParticlesProps> = ({
         window.cancelAnimationFrame(rafID.current);
         rafID.current = null;
       }
-      if (resizeTimeout.current) {
-        clearTimeout(resizeTimeout.current);
+      const timeout = resizeTimeout.current;
+      if (timeout) {
+        clearTimeout(timeout);
       }
       if (resizeTimeoutId) {
         clearTimeout(resizeTimeoutId);
